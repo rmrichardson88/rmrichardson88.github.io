@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #1a1a1a;
@@ -90,7 +90,14 @@ section h2 {
 }
 
 .project-card p {
+  font-size: 0.95rem;
+  color: #333;
   margin-bottom: 0.75rem;
+}
+
+/* Add spacing between description and stack */
+.project-card p + p {
+  margin-top: 0.25rem;
 }
 
 /* Footer */
@@ -119,6 +126,10 @@ body.dark .project-card {
 
 body.dark .project-card:hover {
   box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .project-card p {
+  color: #ccc;
 }
 
 body.dark a {
