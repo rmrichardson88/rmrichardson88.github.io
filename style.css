@@ -52,6 +52,19 @@ header p {
   cursor: pointer;
 }
 
+.profile-pic {
+  width: 15vw;
+  max-width: 100px;
+  min-width: 60px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 /* Sections */
 section {
   margin-bottom: 4rem;
