@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -48,4 +49,36 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Projects grid styles */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.project-card {
+  background: #f2f6fa;
+  border-left: 4px solid #004f74;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #004f74;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: 600;
 }
