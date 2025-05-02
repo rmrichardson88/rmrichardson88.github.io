@@ -1,4 +1,4 @@
-/* Base Reset and Font */
+/* Base */
 * {
   margin: 0;
   padding: 0;
@@ -141,19 +141,23 @@ body.dark a {
   color: #90caf9;
 }
 
-/* Responsive header for small screens */
+/* Pic */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 1rem;
   }
 
   .profile-pic {
-    margin: 0 0 1rem 0;
+    width: 80px;
+    height: 80px;
+    margin: 0;
   }
 
   .header-text {
     width: 100%;
   }
 }
+
