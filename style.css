@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #1a1a1a;
@@ -25,9 +25,25 @@ a:hover {
 
 /* Header */
 header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
   margin-bottom: 3rem;
   position: relative;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.header-text {
+  flex-grow: 1;
 }
 
 header h1 {
@@ -50,19 +66,6 @@ header p {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-}
-
-.profile-pic {
-  width: 15vw;
-  max-width: 100px;
-  min-width: 60px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Sections */
@@ -103,14 +106,7 @@ section h2 {
 }
 
 .project-card p {
-  font-size: 0.95rem;
-  color: #333;
   margin-bottom: 0.75rem;
-}
-
-/* Add spacing between description and stack */
-.project-card p + p {
-  margin-top: 0.25rem;
 }
 
 /* Footer */
@@ -141,10 +137,23 @@ body.dark .project-card:hover {
   box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1);
 }
 
-body.dark .project-card p {
-  color: #ccc;
-}
-
 body.dark a {
   color: #90caf9;
+}
+
+/* Responsive header for small screens */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin: 0 0 1rem 0;
+  }
+
+  .header-text {
+    width: 100%;
+  }
 }
