@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ryan Richardson | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ryan Richardson – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <h1>Hi, I'm Ryan Richardson</h1>
     <p>Software Engineer & Data Scientist</p>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
   </header>
 
   <section id="about">
@@ -22,7 +22,7 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
-      
+
       <!-- Project 1 -->
       <div class="project-card">
         <h3>Tool Wear Deep Learning Regressor</h3>
@@ -42,7 +42,7 @@
       <!-- Project 3 -->
       <div class="project-card">
         <h3>Autocommitter</h3>
-        <p>Tongue-In-Cheek Project that runs a scheduled job to Make ReadMe Commits to my Github and keep my commit history green</p>
+        <p>Tongue-in-cheek project that runs a scheduled job to make ReadMe commits to my GitHub and keep my commit history green</p>
         <p><strong>Stack:</strong> Python, YML</p>
         <a href="https://github.com/rmrichardson88/AutoCommitter/tree/main" target="_blank">GitHub Repo</a>
       </div>
@@ -50,7 +50,7 @@
       <!-- Project 4 -->
       <div class="project-card">
         <h3>Pluribus Poker ML Models</h3>
-        <p>Old Project that built some ML models in R based on online Facebook Texas Hold 'Em Logs</p>
+        <p>Old project that built some ML models in R based on online Facebook Texas Hold 'Em logs</p>
         <p><strong>Stack:</strong> R: tidyverse, caret, ggplot, RandomForest, arules, kernlab</p>
         <a href="https://github.com/rmrichardson88/PluribusPokerMLModels/tree/main" target="_blank">GitHub Repo</a>
       </div>
@@ -58,7 +58,7 @@
       <!-- Project 5 -->
       <div class="project-card">
         <h3>Spotify-Spark Pipeline</h3>
-        <p>Data Pipeline Using Spark to Pull Data from the Spotify API and Land it in Various Distributed Systems</p>
+        <p>Data pipeline using Spark to pull data from the Spotify API and land it in various distributed systems</p>
         <p><strong>Stack:</strong> Python: Spark, Pandas, Numpy, Matplotlib/Seaborn | Neo4j | Elastic</p>
         <a href="https://github.com/rmrichardson88/spotify_spark_pipeline/tree/main" target="_blank">GitHub Repo</a>
       </div>
@@ -80,5 +80,23 @@
       <a href="https://linkedin.com/in/rmrichardson88" target="_blank">LinkedIn</a>
     </p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      toggle.textContent = '☀️';
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      const isDark = body.classList.contains('dark');
+      toggle.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
